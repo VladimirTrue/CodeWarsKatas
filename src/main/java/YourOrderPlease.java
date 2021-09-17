@@ -11,13 +11,26 @@ Examples
 ""  -->  ""
 * */
 
+import java.util.Arrays;
+
 public class YourOrderPlease {
     public static void main(String[] args) {
         System.out.println(order("is2 Thi1s T4est 3a"));
     }
 
     public static String order(String words) {
-        String.valueOf(words);
-        return "";
+        if (words.isEmpty()) return "";
+        String[] arrWords = words.split(" ");
+        String res = "";
+        int count = 1;
+        for (; count < arrWords.length + 1; ) {
+            for (String word : Arrays.asList(arrWords)) {
+                if (!res.contains(words) && word.contains(Integer.toString(count))) {
+                    res += word + " ";
+                    count++;
+                }
+            }
+        }
+        return res.trim();
     }
 }
