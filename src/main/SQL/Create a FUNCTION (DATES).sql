@@ -1,7 +1,7 @@
 
 CREATE FUNCTION agecalculator(x timestamp)
     RETURNS integer as
-'select (round(extract(epoch from age(NOW(), x))/86400/365)::integer);'
+'select (trunc(extract(YEAR from age(NOW(), x)))::integer);'
     LANGUAGE SQL;
 
 /*
