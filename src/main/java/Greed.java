@@ -5,6 +5,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Greed {
     public static void main(String[] args) {
+        System.out.println(2 % 3);
+        System.out.println(1 % 3);
         //System.out.println(greedy(new int[]{5, 1, 3, 4, 1}));
         System.out.println(greedy(new int[]{1, 1, 1, 3, 1}));
         System.out.println(greedy(new int[]{2, 4, 4, 5, 4}));
