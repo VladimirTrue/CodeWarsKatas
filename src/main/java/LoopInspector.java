@@ -35,5 +35,5 @@ For example in the following picture the tail's size is 3 and the loop size is 1
 
 // Use the `getNext()` method to get the following node.
 node.getNext()
-ы
+
 */
