@@ -9,18 +9,6 @@ import java.util.stream.Collectors;
 
 public class CountIf {
 
-    public static void main(String[] args) {
-        List<Integer> list = new LinkedList<>();
-        Node<Integer> head = new Node<>(1);
-        Node<Integer> node1 = new Node<>(2);
-        Node<Integer> node2 = new Node<>(3);
-        head.next = node1;
-        node1.next = node2;
-
-        System.out.println(countIf(head, x -> x >= 2));
-
-    }
-
     static <T> int countIf(Node<T> head, Predicate<T> p) {
         if (head == null) return 0;
         List<T> list = new ArrayList<>();
